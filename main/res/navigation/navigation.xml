@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/menuPrincipal">
+
+    <fragment
+        android:id="@+id/menuPrincipal"
+        android:name="com.example.visitnow.MenuPrincipal"
+        android:label="fragment_menu_principal"
+        tools:layout="@layout/fragment_menu_principal" >
+        <action
+            android:id="@+id/menu_to_grilla"
+            app:destination="@id/grilla" />
+        <action
+            android:id="@+id/menu_to_parametros"
+            app:destination="@id/parametros" />
+    </fragment>
+    <fragment
+        android:id="@+id/grilla"
+        android:name="com.example.visitnow.Grilla"
+        android:label="fragment_grilla"
+        tools:layout="@layout/fragment_grilla" >
+        <action
+            android:id="@+id/grilla_to_detalle"
+            app:destination="@id/detalle" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalle"
+        android:name="com.example.visitnow.Detalle"
+        android:label="fragment_detalle"
+        tools:layout="@layout/fragment_detalle" />
+    <fragment
+        android:id="@+id/parametros"
+        android:name="com.example.visitnow.Parametros"
+        android:label="fragment_parametros"
+        tools:layout="@layout/fragment_parametros" />
+</navigation>
